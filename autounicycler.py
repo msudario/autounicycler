@@ -38,11 +38,11 @@ def function(diretorio):
         
         if args.thread:
             command_line = ['unicycler', '-1', f'{lista2[0]}', '-2', f'{lista2[1]}', '-o', f'{caminho}', '-t', args.thread]
-            print(command_line)
+            subprocess.call(command_line)
             
         else:
             command_line = ['unicycler', '-1', f'{lista2[0]}', '-2', f'{lista2[1]}', '-o', f'{caminho}']
-            print(command_line)
+            subprocess.call(command_line)
             
 if __name__ == '__main__':
     function(diretorio)
