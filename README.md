@@ -5,7 +5,7 @@ Simple run in your terminal: <code>python path/to/script.py</code>     with the 
   
 options:<p>
   -h, --help       show this help message and exit<p>
-  -i , --input     path to the fasta files i.e: <code>home/usr/Desktop/folder_with_your_files or ~/Desktop/folder_with_your_files</code><p>
+  -i , --input     path to the fastaq files i.e: <code>home/usr/Desktop/folder_with_your_files or ~/Desktop/folder_with_your_files</code><p>
   -t , --threads       CPU thread usage (OPTIONAL)<p>
  
  
