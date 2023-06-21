@@ -8,7 +8,7 @@ parser = argparse.ArgumentParser(
 
 parser.add_argument('-i', '--input', metavar='', type=str, required=True,
                     help='Path to the files i.e: home/usr/Desktop/myfiles')
-parser.add_argument('-t', '--thread', metavar='', type=int, required=False,
+parser.add_argument('-t', '--thread', metavar='', type=str, required=False,
                     help='[OPTIONAL] Number of threads i.e: 8')
 
 args = parser.parse_args()
@@ -41,11 +41,11 @@ def function(diretorio):
         caminho = os.path.join(f'{diretorio}', 'results_autounicycler', f'{nome_do_diretorio}')
         
         if args.thread:
-            command_line = ['unicycler', '-1', f'{lista2[0]}', '-2', f'{lista2[1]}', '-o', f'{caminho}', '-t', args.thread]
+            command_line = ['unicycler', '-1', os.path.join(f'{diretorio}', f'{lista2[0]}'), '-2', os.path.join(f'{diretorio}', f'{lista2[1]}'), '-o', f'{caminho}', '-t', args.thread]
             subprocess.call(command_line)
             
         else:
-            command_line = ['unicycler', '-1', f'{lista2[0]}', '-2', f'{lista2[1]}', '-o', f'{caminho}']
+            command_line = ['unicycler', '-1', os.path.join(f'{diretorio}', f'{lista2[0]}'), '-2', os.path.join(f'{diretorio}', f'{lista2[1]}'), '-o', f'{caminho}']
             subprocess.call(command_line)
             
 if __name__ == '__main__':
