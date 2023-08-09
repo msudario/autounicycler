@@ -41,11 +41,11 @@ def function(diretorio):
         caminho = os.path.join(f'{diretorio}', 'results_autounicycler', f'{nome_do_diretorio}')
         
         if args.thread:
-            command_line = ['unicycler', '-1', os.path.join(f'{diretorio}', f'{lista2[0]}'), '-2', os.path.join(f'{diretorio}', f'{lista2[1]}'), '-o', f'{caminho}', '-t', args.thread]
+            command_line = ['unicycler', '-1', os.path.join(f'{diretorio}', f'{lista2[0]}'), '-2', os.path.join(f'{diretorio}', f'{lista2[1]}'), '-o', f'{caminho}', '-t', args.thread, '--min_fasta_length', '200']
             subprocess.call(command_line)
             
         else:
-            command_line = ['unicycler', '-1', os.path.join(f'{diretorio}', f'{lista2[0]}'), '-2', os.path.join(f'{diretorio}', f'{lista2[1]}'), '-o', f'{caminho}']
+            command_line = ['unicycler', '-1', os.path.join(f'{diretorio}', f'{lista2[0]}'), '-2', os.path.join(f'{diretorio}', f'{lista2[1]}'), '-o', f'{caminho}', '--min_fasta_length', '200']
             subprocess.call(command_line)
             
 if __name__ == '__main__':
