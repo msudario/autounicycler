@@ -14,7 +14,7 @@ parser.add_argument('-t', '--thread', metavar='', type=str, required=False,
 args = parser.parse_args()
 
 diretorio = os.path.expanduser(f'{args.input}') 
-extensoes = ['.fastq', '.fq']
+extensoes = ['.fastq', '.fq', '.gz']
 
 def validate_input_directory(diretorio):
     if not os.path.isdir(diretorio):
